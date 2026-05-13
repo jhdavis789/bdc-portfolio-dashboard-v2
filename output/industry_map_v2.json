@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "description": "12-industry standardized taxonomy for BDC portfolio comparison",
+  "decision_framework": "Classify by primary product/service. Software beats all others. Healthcare beats non-software. Investment vehicles = Financial Services.",
+  "groups": {
+    "Business Services": {
+      "raw_labels": [
+        "Business services",
+        "Commercial & Professional Services",
+        "Commercial Services & Supplies",
+        "Commercial and Professional Services",
+        "Distribution",
+        "Education",
+        "Human resource support services",
+        "Professional Services",
+        "Professional services",
+        "Trading Companies & Distributors"
+      ]
+    },
+    "Consumer & Retail": {
+      "raw_labels": [
+        "Automotive services",
+        "Beverages",
+        "Broadline Retail",
+        "Consumer Discretionary Distribution & Retail",
+        "Consumer Distribution and Retail",
+        "Consumer Durables & Apparel",
+        "Consumer Durables and Apparel",
+        "Consumer Services",
+        "Consumer Staples Distribution & Retail",
+        "Consumer products",
+        "Diversified Consumer Services",
+        "Food Products",
+        "Food and Beverage",
+        "Food and beverage",
+        "Food, Beverage & Tobacco",
+        "Hotels, Restaurants & Leisure",
+        "Household & Personal Products",
+        "Household Products",
+        "Household and Personal Products",
+        "Household products",
+        "Leisure Products",
+        "Leisure and entertainment",
+        "Specialty Retail",
+        "Specialty retail",
+        "Textiles, Apparel & Luxury Goods"
+      ]
+    },
+    "Energy & Utilities": {
+      "raw_labels": [
+        "Energy",
+        "Energy Equipment & Services",
+        "Energy equipment and services",
+        "Gas Utilities",
+        "Independent Power and Renewable Electricity Producers",
+        "Oil, Gas & Consumable Fuels"
+      ]
+    },
+    "Financial Services & Insurance": {
+      "raw_labels": [
+        "Asset Based Finance",
+        "Asset based lending and fund finance",
+        "Banks",
+        "Capital Markets",
+        "Financial Services",
+        "Financial services",
+        "Insurance",
+        "Investment Funds and Vehicles",
+        "Joint ventures"
+      ]
+    },
+    "Healthcare": {
+      "raw_labels": [
+        "Health Care Equipment & Services",
+        "Health Care Equipment & Supplies",
+        "Health Care Equipment and Services",
+        "Health Care Providers & Services",
+        "Healthcare equipment and services",
+        "Healthcare providers and services",
+        "Pharmaceuticals",
+        "Pharmaceuticals, Biotechnology & Life Sciences",
+        "Pharmaceuticals, Biotechnology and Life Sciences"
+      ]
+    },
+    "Industrials & Manufacturing": {
+      "raw_labels": [
+        "Aerospace & Defense",
+        "Aerospace and defense",
+        "Automobile Components",
+        "Automobiles & Components",
+        "Automobiles and Components",
+        "Building Products",
+        "Capital Goods",
+        "Construction & Engineering",
+        "Electrical Equipment",
+        "Machinery",
+        "Manufacturing"
+      ]
+    },
+    "Materials & Packaging": {
+      "raw_labels": [
+        "Chemicals",
+        "Containers & Packaging",
+        "Containers and packaging",
+        "Materials"
+      ]
+    },
+    "Media & Entertainment": {
+      "raw_labels": [
+        "Advertising and media",
+        "Entertainment",
+        "Media",
+        "Media & Entertainment",
+        "Sports, Media and Entertainment"
+      ]
+    },
+    "Real Estate & Infrastructure": {
+      "raw_labels": [
+        "Buildings and real estate",
+        "Data Centers",
+        "Equity Real Estate Investment Trusts (REITs)",
+        "Infrastructure and environmental services",
+        "Real Estate Management & Development",
+        "Real Estate Mgmt. & Development"
+      ]
+    },
+    "Software & Technology Services": {
+      "raw_labels": [
+        "Health Care Technology",
+        "Healthcare technology",
+        "IT Services",
+        "Interactive Media & Services",
+        "Internet software and services",
+        "Software",
+        "Software & Services",
+        "Software and Services",
+        "Technology Hardware & Equipment"
+      ]
+    },
+    "Telecommunications": {
+      "raw_labels": [
+        "Communications Equipment",
+        "Telecommunication Services",
+        "Telecommunications",
+        "Wireless Telecommunication Services"
+      ]
+    },
+    "Transportation & Logistics": {
+      "raw_labels": [
+        "Air Freight & Logistics",
+        "Transportation"
+      ]
+    }
+  }
+}

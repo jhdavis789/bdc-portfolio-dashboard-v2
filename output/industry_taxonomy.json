@@ -1,0 +1,3562 @@
+{
+  "version": 3,
+  "description": "Multi-dimensional industry taxonomy with weighted exposure tags. Each investment maps to a (sector, sub_sector) and inherits exposure weights across risk dimensions. Weights sum to 1.0.",
+  "exposure_dimensions": [
+    "software",
+    "healthcare",
+    "financial",
+    "consumer",
+    "industrial",
+    "business_services",
+    "infrastructure",
+    "technology_hardware"
+  ],
+  "taxonomy": {
+    "Software & Technology": {
+      "Application Software": {
+        "exposure": {
+          "software": 1.0
+        }
+      },
+      "Systems & Infrastructure Software": {
+        "exposure": {
+          "software": 0.9,
+          "technology_hardware": 0.1
+        }
+      },
+      "Internet Software & Services": {
+        "exposure": {
+          "software": 0.7,
+          "consumer": 0.3
+        }
+      },
+      "Healthcare IT": {
+        "exposure": {
+          "software": 0.5,
+          "healthcare": 0.5
+        }
+      },
+      "Financial Software & Fintech": {
+        "exposure": {
+          "software": 0.5,
+          "financial": 0.5
+        }
+      },
+      "Real Estate Technology": {
+        "exposure": {
+          "software": 0.5,
+          "infrastructure": 0.5
+        }
+      },
+      "IT Services & Consulting": {
+        "exposure": {
+          "software": 0.4,
+          "business_services": 0.4,
+          "technology_hardware": 0.2
+        }
+      },
+      "General Software": {
+        "exposure": {
+          "software": 1.0
+        }
+      },
+      "Technology Hardware": {
+        "exposure": {
+          "technology_hardware": 0.8,
+          "software": 0.2
+        }
+      },
+      "AI & Automation": {
+        "exposure": {
+          "software": 0.6,
+          "industrial": 0.2,
+          "technology_hardware": 0.2
+        }
+      },
+      "High Tech (General)": {
+        "exposure": {
+          "software": 0.5,
+          "technology_hardware": 0.5
+        }
+      },
+      "Construction Technology": {
+        "exposure": {
+          "software": 0.5,
+          "industrial": 0.5
+        }
+      },
+      "Supply Chain Technology": {
+        "exposure": {
+          "software": 0.6,
+          "industrial": 0.4
+        }
+      }
+    },
+    "Healthcare & Life Sciences": {
+      "Healthcare Providers & Services": {
+        "exposure": {
+          "healthcare": 1.0
+        }
+      },
+      "Pharmaceuticals & Biotech": {
+        "exposure": {
+          "healthcare": 1.0
+        }
+      },
+      "Medical Devices & Equipment": {
+        "exposure": {
+          "healthcare": 0.8,
+          "industrial": 0.2
+        }
+      },
+      "Life Sciences Tools": {
+        "exposure": {
+          "healthcare": 0.7,
+          "industrial": 0.2,
+          "technology_hardware": 0.1
+        }
+      }
+    },
+    "Financial Services": {
+      "Insurance": {
+        "exposure": {
+          "financial": 1.0
+        }
+      },
+      "Banking & Capital Markets": {
+        "exposure": {
+          "financial": 1.0
+        }
+      },
+      "Specialty & Diversified Finance": {
+        "exposure": {
+          "financial": 1.0
+        }
+      },
+      "Asset-Based & Structured Finance": {
+        "exposure": {
+          "financial": 1.0
+        }
+      },
+      "Investment Funds & Vehicles": {
+        "exposure": {
+          "financial": 1.0
+        }
+      }
+    },
+    "Business Services": {
+      "Professional Services": {
+        "exposure": {
+          "business_services": 1.0
+        }
+      },
+      "Commercial Services & Supplies": {
+        "exposure": {
+          "business_services": 0.8,
+          "industrial": 0.2
+        }
+      },
+      "Staffing & HR Services": {
+        "exposure": {
+          "business_services": 0.7,
+          "software": 0.3
+        }
+      },
+      "Marketing & Advertising": {
+        "exposure": {
+          "business_services": 0.6,
+          "consumer": 0.4
+        }
+      },
+      "General Business Services": {
+        "exposure": {
+          "business_services": 0.7,
+          "consumer": 0.3
+        }
+      },
+      "Education & Training": {
+        "exposure": {
+          "business_services": 0.7,
+          "software": 0.3
+        }
+      },
+      "Distribution & Wholesale": {
+        "exposure": {
+          "business_services": 0.5,
+          "industrial": 0.3,
+          "consumer": 0.2
+        }
+      }
+    },
+    "Industrials": {
+      "Aerospace & Defense": {
+        "exposure": {
+          "industrial": 0.8,
+          "technology_hardware": 0.2
+        }
+      },
+      "Machinery & Equipment": {
+        "exposure": {
+          "industrial": 1.0
+        }
+      },
+      "Construction & Building": {
+        "exposure": {
+          "industrial": 0.8,
+          "infrastructure": 0.2
+        }
+      },
+      "Transportation & Logistics": {
+        "exposure": {
+          "industrial": 0.5,
+          "infrastructure": 0.5
+        }
+      },
+      "General Manufacturing": {
+        "exposure": {
+          "industrial": 1.0
+        }
+      }
+    },
+    "Consumer Discretionary": {
+      "Hotels, Restaurants & Leisure": {
+        "exposure": {
+          "consumer": 1.0
+        }
+      },
+      "Retail & E-Commerce": {
+        "exposure": {
+          "consumer": 1.0
+        }
+      },
+      "Automotive": {
+        "exposure": {
+          "consumer": 0.5,
+          "industrial": 0.5
+        }
+      },
+      "Consumer Services": {
+        "exposure": {
+          "consumer": 0.8,
+          "business_services": 0.2
+        }
+      },
+      "Apparel & Luxury": {
+        "exposure": {
+          "consumer": 1.0
+        }
+      },
+      "Consumer Products (General)": {
+        "exposure": {
+          "consumer": 1.0
+        }
+      }
+    },
+    "Consumer Staples": {
+      "Food & Beverage": {
+        "exposure": {
+          "consumer": 0.8,
+          "industrial": 0.2
+        }
+      },
+      "Consumer Staples Retail": {
+        "exposure": {
+          "consumer": 1.0
+        }
+      }
+    },
+    "Telecom, Media & Entertainment": {
+      "Telecommunications": {
+        "exposure": {
+          "infrastructure": 0.8,
+          "technology_hardware": 0.2
+        }
+      },
+      "Media & Publishing": {
+        "exposure": {
+          "consumer": 0.6,
+          "business_services": 0.4
+        }
+      },
+      "Entertainment & Sports": {
+        "exposure": {
+          "consumer": 1.0
+        }
+      }
+    },
+    "Energy & Utilities": {
+      "Oil & Gas": {
+        "exposure": {
+          "infrastructure": 1.0
+        }
+      },
+      "Utilities": {
+        "exposure": {
+          "infrastructure": 1.0
+        }
+      },
+      "Renewables & Clean Tech": {
+        "exposure": {
+          "infrastructure": 0.7,
+          "industrial": 0.3
+        }
+      }
+    },
+    "Materials": {
+      "Chemicals": {
+        "exposure": {
+          "industrial": 1.0
+        }
+      },
+      "Packaging & Containers": {
+        "exposure": {
+          "industrial": 1.0
+        }
+      },
+      "Metals, Mining & Paper": {
+        "exposure": {
+          "industrial": 1.0
+        }
+      }
+    },
+    "Real Estate": {
+      "Real Estate Operating & Development": {
+        "exposure": {
+          "infrastructure": 0.7,
+          "financial": 0.3
+        }
+      },
+      "REITs": {
+        "exposure": {
+          "infrastructure": 0.5,
+          "financial": 0.5
+        }
+      }
+    }
+  },
+  "label_map": {
+    "2025-2 Lender Finance Facility": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "ASSETS": {
+      "sector": "Software & Technology",
+      "sub_sector": "Financial Software & Fintech",
+      "exposure": {
+        "software": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Advertising": {
+      "sector": "Business Services",
+      "sub_sector": "Marketing & Advertising",
+      "exposure": {
+        "business_services": 0.6,
+        "consumer": 0.4
+      }
+    },
+    "Advertising / Marketing": {
+      "sector": "Business Services",
+      "sub_sector": "Marketing & Advertising",
+      "exposure": {
+        "business_services": 0.6,
+        "consumer": 0.4
+      }
+    },
+    "Advertising and media": {
+      "sector": "Business Services",
+      "sub_sector": "Marketing & Advertising",
+      "exposure": {
+        "business_services": 0.6,
+        "consumer": 0.4
+      }
+    },
+    "Advertising, Printing & Publishing": {
+      "sector": "Business Services",
+      "sub_sector": "Marketing & Advertising",
+      "exposure": {
+        "business_services": 0.6,
+        "consumer": 0.4
+      }
+    },
+    "Aerospace & Defense": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Aerospace & defense": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Aerospace and Defense": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Aerospace and defense": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Air Freight & Logistics": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Air Freight & Logistics (continued)": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Air Freight and Logistics": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Air freight and logistics": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Airlines": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Airport Services": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Alternative Carriers": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Apparel Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Application Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Artificial Intelligence & Automation": {
+      "sector": "Software & Technology",
+      "sub_sector": "AI & Automation",
+      "exposure": {
+        "software": 0.6,
+        "industrial": 0.2,
+        "technology_hardware": 0.2
+      }
+    },
+    "Asset Based Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Asset Based Lending and Fund Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Asset Management & Custody Banks": {
+      "sector": "Financial Services",
+      "sub_sector": "Banking & Capital Markets",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Asset based lending and fund finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Auto Aftermarket & Services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Auto Components": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Auto components": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automobile": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automobile Components": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automobile components": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automobiles": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automobiles & Components": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automobiles and Components": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automotive": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automotive Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Automotive aftermarket": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Automotive services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Automotive",
+      "exposure": {
+        "consumer": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Aviation and Consumer Transport": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Banking": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Banking, Finance, Insurance & Real Estate": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Banking, Finance, Insurance, & Real Estate": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Banking, Finance, Insurance, Real Estate": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Banks": {
+      "sector": "Financial Services",
+      "sub_sector": "Banking & Capital Markets",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Beverage & Food": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Beverage, Food & Tobacco": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Beverage, Food, & Tobacco": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Beverages": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Biotechnology": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Biotechnology Tools": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Broadcasting": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Broadcasting and Entertainment": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Broadline Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Building Products": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Building Products (continued)": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Building products": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Buildings & Real Estate": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Buildings and Real Estate": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Buildings and real estate": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Business Applications Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Business Products": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Business Products and Services": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Business Services": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Business services": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Business to Business Marketplace": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Business/Productivity Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Cable & Satellite": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Capital Equipment": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Capital Goods": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Capital Markets": {
+      "sector": "Financial Services",
+      "sub_sector": "Banking & Capital Markets",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Capital Markets (Continued)": {
+      "sector": "Financial Services",
+      "sub_sector": "Banking & Capital Markets",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Cargo Transport": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Casinos & Gaming": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Chemicals": {
+      "sector": "Materials",
+      "sub_sector": "Chemicals",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Commercial & Professional Services": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Commercial Services": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Commercial Services and Supplies": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Commercial Services and Supplies (Continued)": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Commercial and Professional Services": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Commercial services and supplies": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Communication Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Systems & Infrastructure Software",
+      "exposure": {
+        "software": 0.9,
+        "technology_hardware": 0.1
+      }
+    },
+    "Communications & Networking": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Communications Equipment": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Computer & Electronics Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Computer Hardware": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Connectivity": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Construction & Building": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Construction & Engineering": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Construction Machinery & Heavy Transportation Equipment": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Construction Materials": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Construction Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Construction Technology",
+      "exposure": {
+        "software": 0.5,
+        "industrial": 0.5
+      }
+    },
+    "Construction and Engineering": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Construction and engineering": {
+      "sector": "Industrials",
+      "sub_sector": "Construction & Building",
+      "exposure": {
+        "industrial": 0.8,
+        "infrastructure": 0.2
+      }
+    },
+    "Consumer & Business Products": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Consumer & Business Services": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Consumer Discretionary Distribution & Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Distribution and Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Durables & Apparel": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Products (General)",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Durables and Apparel": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Products (General)",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Consumer Non-Durables": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Products (General)",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Products (General)",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Products & Services": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Consumer Products and Services": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Consumer Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer Services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Consumer Staples Distribution & Retail": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Consumer Staples Retail",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Consumer products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Products (General)",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Containers & Packaging": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Containers & packaging": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Containers and Packaging": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Containers and packaging": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Containers, Packaging & Glass": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Containers, Packaging and Glass": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Containers, Packaging, & Glass": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Data Centers": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "Data Processing & Outsourced Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "Database Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Systems & Infrastructure Software",
+      "exposure": {
+        "software": 0.9,
+        "technology_hardware": 0.1
+      }
+    },
+    "Defense Technologies": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Diagnostics & Tools": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Digital Assets Technology and Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "Financial Software & Fintech",
+      "exposure": {
+        "software": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Distribution": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Distribution & Logistics": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Distributors": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Distributors (Trading companies & distributors)": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Diversified Chemicals": {
+      "sector": "Materials",
+      "sub_sector": "Chemicals",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Diversified Consumer Services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Diversified Consumer Services (Continued)": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Diversified Consumer Services (continued)": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Diversified Financial Services": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Diversified Financial Services (Continued)": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Diversified Financials": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Diversified REITs": {
+      "sector": "Real Estate",
+      "sub_sector": "REITs",
+      "exposure": {
+        "infrastructure": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Diversified Real Estate Activities": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Diversified Support Services": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Diversified Telecommunication Services": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Diversified consumer services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Diversified telecommunication services": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Drug Delivery": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Drug Discovery & Development": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Drug Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "E-Commerce - Clothing and Accessories": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "E-Commerce - Personal Goods": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Ecological": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Renewables & Clean Tech",
+      "exposure": {
+        "infrastructure": 0.7,
+        "industrial": 0.3
+      }
+    },
+    "Education": {
+      "sector": "Business Services",
+      "sub_sector": "Education & Training",
+      "exposure": {
+        "business_services": 0.7,
+        "software": 0.3
+      }
+    },
+    "Education Services": {
+      "sector": "Business Services",
+      "sub_sector": "Education & Training",
+      "exposure": {
+        "business_services": 0.7,
+        "software": 0.3
+      }
+    },
+    "Education Technology": {
+      "sector": "Business Services",
+      "sub_sector": "Education & Training",
+      "exposure": {
+        "business_services": 0.7,
+        "software": 0.3
+      }
+    },
+    "Educational/Training Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Electric Utilities": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Electrical Components & Equipment": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Electrical Equipment": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Electrical equipment": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Electronic Equipment & Instruments": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Electronic Equipment, Instruments & Components": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Electronic Equipment, Instruments and Components": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Electronic equipment, instruments and components": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Electronics & Computer Hardware": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Energy": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Energy Equipment & Services": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Energy Equipment and Services": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Energy equipment and services": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Energy, Equipment & Services": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Energy: Electricity": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Energy: Oil & Gas": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Entertainment": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Entertainment & Sports",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Environmental & Facilities Services": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Environmental Industries": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Equity Real Estate Investment Trusts (REITs)": {
+      "sector": "Real Estate",
+      "sub_sector": "REITs",
+      "exposure": {
+        "infrastructure": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Fertilizer & Agricultural Chemicals": {
+      "sector": "Materials",
+      "sub_sector": "Chemicals",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Finance and Insurance": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Financial Exchanges & Data": {
+      "sector": "Financial Services",
+      "sub_sector": "Banking & Capital Markets",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Financial Institution and Services": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Financial Services": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Financial Services & Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Financial Software & Fintech",
+      "exposure": {
+        "software": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Financial Services (continued)": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Financial Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Financial Software & Fintech",
+      "exposure": {
+        "software": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Financial services": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Food & Drug": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food & Staples Retailing": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Consumer Staples Retail",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Food Distributors": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food Products": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food and Agriculture Technologies": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food and Beverage": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food and beverage": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food and staples retailing": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Consumer Staples Retail",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Food products": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Food, Beverage & Tobacco": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Footwear": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Gas Utilities": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Gas utilities": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "General Media and Content": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Gold": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Green Technology": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Renewables & Clean Tech",
+      "exposure": {
+        "infrastructure": 0.7,
+        "industrial": 0.3
+      }
+    },
+    "Ground Transportation": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Health Care Distributors": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Equipment": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Equipment & Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Equipment & Supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Equipment and Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Equipment and Supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Providers & Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Health Care Providers & Services (continued)": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Health Care Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Health Care Supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health Care Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Health Care Technology (continued)": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Health care equipment & supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health care equipment and supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Health care providers & services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Health care providers and services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Health care technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Healthcare": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Healthcare Equipment": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Healthcare Equipment & Supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Healthcare Equipment and Supplies": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Healthcare Providers & Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Healthcare Providers and Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Healthcare Providers and Services (Continued)": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Healthcare Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Healthcare Services, Other": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Healthcare Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Healthcare Technology Systems": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Healthcare equipment and services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Healthcare providers and services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Healthcare technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Healthcare, Education and Childcare": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "High Tech": {
+      "sector": "Software & Technology",
+      "sub_sector": "High Tech (General)",
+      "exposure": {
+        "software": 0.5,
+        "technology_hardware": 0.5
+      }
+    },
+    "Home Furnishings": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Home Improvement Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotel, Game & Leisure": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotel, Gaming & Leisure": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotel, Gaming, & Leisure": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotel, Gaming, Leisure, Restaurants": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotels, Resorts & Cruise Lines": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotels, Restaurants & Leisure": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Hotels, Restaurants and Leisure": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Household & Personal Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Household Durables": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Household Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Household and Personal Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Household durables": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Household products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Housewares & Specialties": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Human Resource & Employment Services": {
+      "sector": "Business Services",
+      "sub_sector": "Staffing & HR Services",
+      "exposure": {
+        "business_services": 0.7,
+        "software": 0.3
+      }
+    },
+    "Human Resource Technology": {
+      "sector": "Business Services",
+      "sub_sector": "Staffing & HR Services",
+      "exposure": {
+        "business_services": 0.7,
+        "software": 0.3
+      }
+    },
+    "Human resource support services": {
+      "sector": "Business Services",
+      "sub_sector": "Staffing & HR Services",
+      "exposure": {
+        "business_services": 0.7,
+        "software": 0.3
+      }
+    },
+    "IT Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "IT Services (continued)": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "IT services": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "Independent Power & Renewable Electricity Producers": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Independent Power and Renewable Electricity Producers": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Industrial Conglomerates": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Industrial Machinery & Supplies & Components": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Industrials": {
+      "sector": "Industrials",
+      "sub_sector": "General Manufacturing",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Information Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "Information Services (B2C)": {
+      "sector": "Software & Technology",
+      "sub_sector": "IT Services & Consulting",
+      "exposure": {
+        "software": 0.4,
+        "business_services": 0.4,
+        "technology_hardware": 0.2
+      }
+    },
+    "Insurance": {
+      "sector": "Financial Services",
+      "sub_sector": "Insurance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Insurance (continued)": {
+      "sector": "Financial Services",
+      "sub_sector": "Insurance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Insurance Brokers": {
+      "sector": "Financial Services",
+      "sub_sector": "Insurance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Insurance Claim Recovery Rate": {
+      "sector": "Financial Services",
+      "sub_sector": "Insurance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Insurance Services": {
+      "sector": "Financial Services",
+      "sub_sector": "Insurance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Interactive Media & Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Interactive Media & Services (continued)": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet & Direct Marketing Retail": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet Services & Infrastructure": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet Software & Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet Software and Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet Software and Services (Continued)": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet and Catalog Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Internet and Direct Marketing Retail": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet and direct marketing retail": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Internet software and services": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Investment Funds": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Investment Funds & Vehicles": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Investment Funds ( 13.7 % of fair value)": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Investment Funds ( 6.6 % of fair value)": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Investment Funds and Vehicles": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Joint Ventures": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Joint ventures": {
+      "sector": "Financial Services",
+      "sub_sector": "Investment Funds & Vehicles",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Leisure Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Leisure Products & Services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Leisure and entertainment": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Leisure equipment and products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Leisure products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Life Sciences Tools & Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Life Sciences Tools",
+      "exposure": {
+        "healthcare": 0.7,
+        "industrial": 0.2,
+        "technology_hardware": 0.1
+      }
+    },
+    "Life Sciences Tools and Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Life Sciences Tools",
+      "exposure": {
+        "healthcare": 0.7,
+        "industrial": 0.2,
+        "technology_hardware": 0.1
+      }
+    },
+    "Life Sciences Tools and Services (Continued)": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Life Sciences Tools",
+      "exposure": {
+        "healthcare": 0.7,
+        "industrial": 0.2,
+        "technology_hardware": 0.1
+      }
+    },
+    "Life sciences tools and services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Life Sciences Tools",
+      "exposure": {
+        "healthcare": 0.7,
+        "industrial": 0.2,
+        "technology_hardware": 0.1
+      }
+    },
+    "Machinery": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Machinery (Continued)": {
+      "sector": "Industrials",
+      "sub_sector": "Machinery & Equipment",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Manufacturing": {
+      "sector": "Industrials",
+      "sub_sector": "General Manufacturing",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Manufacturing Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "AI & Automation",
+      "exposure": {
+        "software": 0.6,
+        "industrial": 0.2,
+        "technology_hardware": 0.2
+      }
+    },
+    "Marine": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Marine Transport": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Marine Transportation": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Marketing, Media, and Entertainment": {
+      "sector": "Business Services",
+      "sub_sector": "Marketing & Advertising",
+      "exposure": {
+        "business_services": 0.6,
+        "consumer": 0.4
+      }
+    },
+    "Materials": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Media": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Media & Entertainment": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Media/Content/Info": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Media: Advertising, Printing & Publishing": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Media: Advertising, Printing, & Publishing": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Media: Broadcasting & Subscription": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Media: Diversified & Production": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Medical Devices": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Medical Devices & Equipment": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Medical Devices & Equipment",
+      "exposure": {
+        "healthcare": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Medical Software and Information Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "Healthcare IT",
+      "exposure": {
+        "software": 0.5,
+        "healthcare": 0.5
+      }
+    },
+    "Metal, Glass & Plastic Containers": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Metals & Mining": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Metals and Mining": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Metals and mining": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Mortgage Real Estate Investment Trusts (REITs)": {
+      "sector": "Real Estate",
+      "sub_sector": "REITs",
+      "exposure": {
+        "infrastructure": 0.5,
+        "financial": 0.5
+      }
+    },
+    "Movies & Entertainment": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Entertainment & Sports",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Multi-Sector Holdings": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Multi-Utilities": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Multiline Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Multimedia and Design Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Multisector holdings": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Network Management Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Systems & Infrastructure Software",
+      "exposure": {
+        "software": 0.9,
+        "technology_hardware": 0.1
+      }
+    },
+    "Network Systems Management Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Systems & Infrastructure Software",
+      "exposure": {
+        "software": 0.9,
+        "technology_hardware": 0.1
+      }
+    },
+    "Office Services & Supplies": {
+      "sector": "Business Services",
+      "sub_sector": "Commercial Services & Supplies",
+      "exposure": {
+        "business_services": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Oil & Gas Drilling": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Oil & Gas Storage & Transportation": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Oil, Gas & Consumable Fuels": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Oil, Gas and Consumable Fuels": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Oil & Gas",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Other Financial Services": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Other Healthcare Services": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Healthcare Providers & Services",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Other Specialty Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Packaged Foods & Meats": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Packaging": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Paper & Forest Products": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Paper & Plastic Packaging Products & Materials": {
+      "sector": "Materials",
+      "sub_sector": "Packaging & Containers",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Paper and Forest Products": {
+      "sector": "Materials",
+      "sub_sector": "Metals, Mining & Paper",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Passenger Airlines": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Personal Care Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Personal Products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Personal care products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Personal products": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Pharmaceuticals": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Pharmaceuticals, Biotechnology & Life Sciences": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Pharmaceuticals, Biotechnology and Life Sciences": {
+      "sector": "Healthcare & Life Sciences",
+      "sub_sector": "Pharmaceuticals & Biotech",
+      "exposure": {
+        "healthcare": 1.0
+      }
+    },
+    "Printing and Publishing": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Media & Publishing",
+      "exposure": {
+        "consumer": 0.6,
+        "business_services": 0.4
+      }
+    },
+    "Professional Services": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Professional Services (Continued)": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Professional Services (continued)": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Professional services": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Property & Casualty Insurance": {
+      "sector": "Financial Services",
+      "sub_sector": "Insurance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Real Estate Development": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Real Estate Management & Development": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Real Estate Management and Development": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Real Estate Mgmt. & Development": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Real Estate Operating Companies": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Real Estate Services": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Real Estate Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Real Estate Technology",
+      "exposure": {
+        "software": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Real estate management and development": {
+      "sector": "Real Estate",
+      "sub_sector": "Real Estate Operating & Development",
+      "exposure": {
+        "infrastructure": 0.7,
+        "financial": 0.3
+      }
+    },
+    "Research & Consulting Services": {
+      "sector": "Business Services",
+      "sub_sector": "Professional Services",
+      "exposure": {
+        "business_services": 1.0
+      }
+    },
+    "Residential Real Estate Investment Trusts (REITs) / Consumer Finance / Structured Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Retail Stores": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Retailing": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Road & Rail": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Road and Rail": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "SaaS": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Semiconductor and Semiconductor Equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Semiconductors": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Semiconductors & Semiconductor Equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Semiconductors and Semiconductor Equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Semiconductors and semiconductor equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Services: Business": {
+      "sector": "Business Services",
+      "sub_sector": "General Business Services",
+      "exposure": {
+        "business_services": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Services: Consumer": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Shopping Facilitators": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Social/Platform Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Internet Software & Services",
+      "exposure": {
+        "software": 0.7,
+        "consumer": 0.3
+      }
+    },
+    "Soft Drinks & Non-alcoholic Beverages": {
+      "sector": "Consumer Staples",
+      "sub_sector": "Food & Beverage",
+      "exposure": {
+        "consumer": 0.8,
+        "industrial": 0.2
+      }
+    },
+    "Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "General Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Software & Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "General Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Software (Continued)": {
+      "sector": "Software & Technology",
+      "sub_sector": "General Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Software (continued)": {
+      "sector": "Software & Technology",
+      "sub_sector": "General Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Software and Services": {
+      "sector": "Software & Technology",
+      "sub_sector": "General Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Software as a Service (\"SaaS\")": {
+      "sector": "Software & Technology",
+      "sub_sector": "Application Software",
+      "exposure": {
+        "software": 1.0
+      }
+    },
+    "Sovereign & Public Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Space Technologies": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Space Technology": {
+      "sector": "Industrials",
+      "sub_sector": "Aerospace & Defense",
+      "exposure": {
+        "industrial": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Specialized Consumer Services": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Consumer Services",
+      "exposure": {
+        "consumer": 0.8,
+        "business_services": 0.2
+      }
+    },
+    "Specialized Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Specialty & Diversified Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Specialty Chemicals": {
+      "sector": "Materials",
+      "sub_sector": "Chemicals",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Specialty Chemicals & Materials": {
+      "sector": "Materials",
+      "sub_sector": "Chemicals",
+      "exposure": {
+        "industrial": 1.0
+      }
+    },
+    "Specialty Retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Specialty retail": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Retail & E-Commerce",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Sports, Media and Entertainment": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Entertainment & Sports",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Structured Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Structured Finance Obligations (continued)": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Structured Product": {
+      "sector": "Financial Services",
+      "sub_sector": "Asset-Based & Structured Finance",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Supply Chain Technology": {
+      "sector": "Software & Technology",
+      "sub_sector": "Supply Chain Technology",
+      "exposure": {
+        "software": 0.6,
+        "industrial": 0.4
+      }
+    },
+    "Sustainable and Renewable Technology": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Renewables & Clean Tech",
+      "exposure": {
+        "infrastructure": 0.7,
+        "industrial": 0.3
+      }
+    },
+    "System Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Systems & Infrastructure Software",
+      "exposure": {
+        "software": 0.9,
+        "technology_hardware": 0.1
+      }
+    },
+    "Systems Software": {
+      "sector": "Software & Technology",
+      "sub_sector": "Systems & Infrastructure Software",
+      "exposure": {
+        "software": 0.9,
+        "technology_hardware": 0.1
+      }
+    },
+    "Technology & Electronics": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Technology Hardware & Equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Technology Hardware and Equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Technology Hardware, Storage & Peripherals": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Technology Hardware, Storage and Peripherals": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Technology, Hardware & Equipment": {
+      "sector": "Software & Technology",
+      "sub_sector": "Technology Hardware",
+      "exposure": {
+        "technology_hardware": 0.8,
+        "software": 0.2
+      }
+    },
+    "Telecommunication Services": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Telecommunications": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Textiles, Apparel & Luxury Goods": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Textiles, Apparel and Luxury Goods": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Textiles, apparel & luxury goods": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Textiles, apparel and luxury goods": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Apparel & Luxury",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Thrifts & Mortgage Finance": {
+      "sector": "Financial Services",
+      "sub_sector": "Banking & Capital Markets",
+      "exposure": {
+        "financial": 1.0
+      }
+    },
+    "Trading Companies & Distributors": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Trading Companies and Distributors": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Trading companies and distributors": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Transportation": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Transportation Infrastructure": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Transportation Technology": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Transportation: Cargo": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Transportation: Consumer": {
+      "sector": "Industrials",
+      "sub_sector": "Transportation & Logistics",
+      "exposure": {
+        "industrial": 0.5,
+        "infrastructure": 0.5
+      }
+    },
+    "Travel & Leisure": {
+      "sector": "Consumer Discretionary",
+      "sub_sector": "Hotels, Restaurants & Leisure",
+      "exposure": {
+        "consumer": 1.0
+      }
+    },
+    "Utilities: Electric": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Utilities: Oil & Gas": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Utilities: Water": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Water Utilities": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Water utilities": {
+      "sector": "Energy & Utilities",
+      "sub_sector": "Utilities",
+      "exposure": {
+        "infrastructure": 1.0
+      }
+    },
+    "Wholesale": {
+      "sector": "Business Services",
+      "sub_sector": "Distribution & Wholesale",
+      "exposure": {
+        "business_services": 0.5,
+        "industrial": 0.3,
+        "consumer": 0.2
+      }
+    },
+    "Wireless Telecommunication Services": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    },
+    "Wireless telecommunication services": {
+      "sector": "Telecom, Media & Entertainment",
+      "sub_sector": "Telecommunications",
+      "exposure": {
+        "infrastructure": 0.8,
+        "technology_hardware": 0.2
+      }
+    }
+  }
+}
