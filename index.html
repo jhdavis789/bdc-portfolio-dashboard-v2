@@ -8540,6 +8540,39 @@ function initNetwork() {
     }
   }
 
+  // Recompute bdc_count / bdcs to reflect ONLY the active (visible) BDC set.
+  // Without this, a company held across all 4 visible BDCs would still show its
+  // full-universe overlap color (e.g. red 8+) instead of the in-set count (4).
+  if (view !== 'summary' && state.network.activeBDCs.size < Object.keys(BDC_REGISTRY).length) {
+    const lmap = {};
+    nodes.forEach(n => { lmap[n.id] = n; });
+    const coBDCs = {};
+    for (const e of edges) {
+      const sId = typeof e.source === 'string' ? e.source : e.source?.id;
+      const tId = typeof e.target === 'string' ? e.target : e.target?.id;
+      const s = lmap[sId], t = lmap[tId];
+      if (!s || !t) continue;
+      // Collapsed/sponsor mode: BDC -> Company direct edges
+      if (s.type === 'bdc' && t.type === 'company') {
+        (coBDCs[t.id] = coBDCs[t.id] || new Set()).add(s.label);
+      } else if (s.type === 'company' && t.type === 'bdc') {
+        (coBDCs[s.id] = coBDCs[s.id] || new Set()).add(t.label);
+      }
+      // Expanded mode: security -> company via 'issued_by'. Security carries its bdc label.
+      else if (e.type === 'issued_by') {
+        const sec = s.type === 'security' ? s : (t.type === 'security' ? t : null);
+        const co  = s.type === 'company'  ? s : (t.type === 'company'  ? t : null);
+        if (sec && co && sec.bdc) (coBDCs[co.id] = coBDCs[co.id] || new Set()).add(sec.bdc);
+      }
+    }
+    nodes.forEach(n => {
+      if (n.type !== 'company') return;
+      const set = coBDCs[n.id];
+      n.bdc_count = set ? set.size : 0;
+      n.bdcs = set ? [...set] : [];
+    });
+  }
+
   // BDC-count filter: remove nodes from simulation entirely (not just hiding)
   // This reduces node count and improves performance when filtering
   if (view !== 'summary' && state.network.bcFilter) {
